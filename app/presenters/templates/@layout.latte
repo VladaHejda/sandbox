@@ -18,6 +18,9 @@
 <body>
 	<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
 
+	<div>
+		<a n:href="this, lang => cs">CS</a>
+	</div>
 	{include content}
 
 	{block scripts}
