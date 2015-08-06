@@ -1,0 +1,22 @@
+{block head}
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<style>
+		#expose { color: red; }
+	</style>
+{/block}
+
+{block content}
+
+{control feedForm}
+
+<div id="expose"></div>
+
+<script>
+$(function () {
+	var expose = $('#expose');
+	$('form input[type=hidden]').each(function(i, input) {
+		input = $(input);
+		expose.append('<small>' + input.attr('name') + ':</small> <b>' + input.val() + '</b><br>');
+	});
+})
+</script>
